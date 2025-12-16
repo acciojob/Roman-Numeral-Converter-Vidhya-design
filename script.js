@@ -10,15 +10,19 @@ function convertToRoman(num) {
     };
 
   //your code here
-	let result="";
+ let result = "";
 
-	for(let [symbol,value] of romanMap){
-    while (num >= value){
-     result += symbol;
-		num -=value;
-}
-}
-   return result;
+  for (let i = 0; i < romanMap.length; i++) {
+    const symbol = romanMap[i][0];
+    const value = romanMap[i][1];
+
+    while (num >= value) {
+      result += symbol;
+      num -= value;
+    }
+  }
+
+  return result;
 }
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
 
