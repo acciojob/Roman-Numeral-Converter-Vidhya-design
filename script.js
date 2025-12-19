@@ -12,9 +12,9 @@ function convertToRoman(num) {
   //your code here
  let result = "";
 
-  for (let i = 0; i < romanMap.length; i++) {
-    const symbol = romanMap[i][0];
-    const value = romanMap[i][1];
+  for (let i = 0; i < obj.length; i++) {
+    const symbol = obj[i][0];
+    const value = obj[i][1];
 
     while (num >= value) {
       result += symbol;
